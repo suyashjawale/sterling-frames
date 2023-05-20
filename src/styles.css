@@ -40,7 +40,11 @@ body {
     }
 
     .nav-content-margin {
-        margin-top: 7rem !important;
+        margin-top: 7.5rem !important;
+    }
+
+    .scrollable-div::-webkit-scrollbar {
+        display: none;
     }
 }
 
@@ -68,7 +72,7 @@ body {
     }
 
     .nav-content-margin {
-        margin-top: 5.5rem !important;
+        margin-top: 6rem !important;
     }
 }
 
@@ -90,5 +94,27 @@ body {
     .xl-invisible {
         display: none !important;
     }
+}
 
+.scrollable-div {
+    overflow-x: scroll;
+}
+
+.scrollable-div::-webkit-scrollbar {
+    height: 0.37rem;
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: #ececec;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #929292;
+}
+
+.scrollable-div .card {
+    flex: 0 0 auto;
+    width: 18rem;
 }

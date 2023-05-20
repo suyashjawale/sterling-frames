@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'app-navbar',
@@ -10,9 +10,20 @@ export class NavbarComponent {
     options: Set<string> = new Set(['sanfransico', 'japan', 'yokohama 1', 'yokohama', 'czech', 'czech repulic']);
     filteredOptions: Set<string> = new Set();
     searchText: string = "";
+    loggedIn: boolean = false;
     selectedIndex = -1;
+    touchStartX: number = -1;
+    touchEndX: number = -1;
     optionIndices: Map<string, number> = new Map();
 
+    closeOffcanvas:any;
+
+    constructor(private elementRef: ElementRef) {}
+
+    ngOnInit(){
+        this.closeOffcanvas = this.elementRef.nativeElement.querySelector('#closeOffcanvas');
+    }
+    
     filterOptions(): void {
         const lowerCaseSearchText = this.searchText.toLowerCase();
 
@@ -53,6 +64,24 @@ export class NavbarComponent {
         const option = [...this.filteredOptions][ind];
         this.searchText = option;
         this.filteredOptions.clear();
-        this.selectedIndex = -1;
+        // this.selectedIndex = -1;
     }
+
+    @HostListener('touchstart', ['$event'])
+    onTouchStart(event: TouchEvent) {
+        this.touchStartX = event.touches[0].clientX;
+    }
+
+    @HostListener('touchmove', ['$event'])
+    onTouchMove(event: TouchEvent) {
+        this.touchEndX = event.touches[0].clientX;
+    }
+
+    @HostListener('touchend')
+    onTouchEnd() {
+        if (this.touchStartX - this.touchEndX > 50) {
+            this.closeOffcanvas.click();
+        }
+    }
+
 }
