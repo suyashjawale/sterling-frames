@@ -11,6 +11,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
+import { FlexboxProductComponent } from './components/flexbox-product/flexbox-product.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProductComponent } from './components/product/product.component';
     WishlistComponent,
     CartComponent,
     ProductsComponent,
-    ProductComponent
+    ProductComponent,
+    FlexboxProductComponent
   ],
   imports: [
     BrowserModule,

@@ -7,5 +7,7 @@ import { NgOptimizedImage } from '@angular/common'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  counter(i: number) {
+    return new Array(i);
+}
 }

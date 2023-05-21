@@ -113,10 +113,22 @@ body {
 
 .scrollable-div::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: #929292;
+    background-color: #b1b1b1;
 }
 
 .scrollable-div .card {
     flex: 0 0 auto;
     width: 18rem;
+}
+
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b1b1b1;
 }
