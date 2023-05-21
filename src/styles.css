@@ -98,6 +98,8 @@ body {
 
 .scrollable-div {
     overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #929292 #ececec;
 }
 
 .scrollable-div::-webkit-scrollbar {
