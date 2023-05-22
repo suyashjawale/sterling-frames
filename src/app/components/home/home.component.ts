@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common'
+
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent {
-  counter(i: number) {
-    return new Array(i);
-}
+	counter(i: number) {
+		return new Array(i);
+	}
+
+	images: string[] = ['assets/ganesh.jpg', 'assets/hanuman.jpg', 'assets/lord-shiva.jpg'];
 }

@@ -132,3 +132,7 @@ body {
 ::-webkit-scrollbar-thumb {
     background-color: #b1b1b1;
 }
+
+.filter-image-width {
+    width: 6.7rem;
+}
