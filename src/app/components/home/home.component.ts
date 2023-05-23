@@ -8,9 +8,4 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
-	counter(i: number) {
-		return new Array(i);
-	}
-
-	images: string[] = ['assets/ganesh.jpg', 'assets/hanuman.jpg', 'assets/lord-shiva.jpg'];
 }

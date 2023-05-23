@@ -2,41 +2,30 @@
 
 	<div class="d-flex justify-content-center">
 		<div class="text-center me-1">
-			<div><img src="assets/lord-shiva.jpg" class="img-fluid myimage filter-image-width rounded" /></div>
-			<small>God</small>
+			<a class="nav-link" routerLink="/category/god" ariaCurrentWhenActive="page">
+				<div><img src="assets/lord-shiva.jpg" class="img-fluid myimage filter-image-width rounded" /></div>
+				<small routerLinkActive="font-600">God</small>
+			</a>
 		</div>
 
 		<div class="text-center me-1">
-			<div><img src="assets/nature.jpg" class="img-fluid filter-image-width rounded" /></div>
-			<small>Nature</small>
+			<a class="nav-link" routerLink="/category/nature" ariaCurrentWhenActive="page">
+				<div><img src="assets/nature.jpg" class="img-fluid filter-image-width rounded" /></div>
+				<small routerLinkActive="font-600">Nature</small>
+			</a>
 		</div>
 		<div class="text-center me-1">
-			<div><img src="assets/chhatrapati-shivaji-maharaj.jpg" class="img-fluid filter-image-width rounded" /></div>
-			<small>Idols</small>
+			<a class="nav-link" routerLink="/category/idols" ariaCurrentWhenActive="page">
+				<div><img src="assets/chhatrapati-shivaji-maharaj.jpg" class="img-fluid filter-image-width rounded" /></div>
+				<small routerLinkActive="font-600">Idols</small>
+			</a>
 		</div>
 		<div class="text-center">
-			<div><img src="assets/modern-art.jpg" class="img-fluid filter-image-width rounded" /></div>
-			<small>Modern</small>
+			<a class="nav-link" routerLink="/category/modernart" ariaCurrentWhenActive="page">
+				<div><img src="assets/modern-art.jpg" class="img-fluid filter-image-width rounded" /></div>
+				<small routerLinkActive="font-600">Modern Art</small>
+			</a>
 		</div>
 	</div>
-
-	<h4 class="my-3">Featured this week</h4>
-	<div class="row">
-
-		<div class="col-12 col-md-3 col-sm-6" *ngFor='let in of counter(8)'>
-			<app-product></app-product>
-		</div>
-	</div>
-
-	<hr />
-	<h4 class="mb-3">New Arrivals</h4>
-
-	<div class="scrollable-div mb-5 pb-2">
-		<div class="d-flex flex-nowrap">
-			<app-flexbox-product *ngFor='let in of counter(8)'></app-flexbox-product>
-			<div>&nbsp;
-			</div>
-		</div>
-	</div>
-
+<router-outlet></router-outlet>
 </div>
