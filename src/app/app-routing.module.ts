@@ -4,10 +4,11 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { CartComponent } from './components/cart/cart.component';
-import { ProductsComponent } from './components/products/products.component';
 import { HomePageDataComponent } from './components/home-page-data/home-page-data.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CategoryComponent } from './components/category/category.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
 	{
@@ -57,8 +58,9 @@ const routes: Routes = [
 	{ path: 'profile', component: ProfileComponent,pathMatch:'full' },
 	{ path: 'mycart', component: CartComponent,pathMatch:'full' },
 	{ path: 'wishlist', component: WishlistComponent,pathMatch:'full' },
-	// { path: 'frames/:productName', component: ProductsComponent,pathMatch:'full'},
-	{path: '**', component: PageNotFoundComponent,pathMatch:'full'}
+	{ path: 'frame/:frameId', component: ProductDetailsComponent,pathMatch:'full' },
+	{ path: 'search', component: SearchComponent,pathMatch:'full'},
+	{ path: '**', component: PageNotFoundComponent,pathMatch:'full'}
 ];
 
 @NgModule({

@@ -15,6 +15,9 @@ import { FlexboxProductComponent } from './components/flexbox-product/flexbox-pr
 import { HomePageDataComponent } from './components/home-page-data/home-page-data.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CategoryComponent } from './components/category/category.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { SearchComponent } from './components/search/search.component';
+import { ProductCardsComponent } from './components/product-cards/product-cards.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { CategoryComponent } from './components/category/category.component';
     FlexboxProductComponent,
     HomePageDataComponent,
     PageNotFoundComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProductDetailsComponent,
+    SearchComponent,
+    ProductCardsComponent
   ],
   imports: [
     BrowserModule,

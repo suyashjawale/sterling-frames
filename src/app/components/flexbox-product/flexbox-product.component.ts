@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./flexbox-product.component.css']
 })
 export class FlexboxProductComponent {
-
+	counter(i: number) {
+		return new Array(i);
+	}
 }

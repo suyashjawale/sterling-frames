@@ -1,1 +1,90 @@
-<p>products works!</p>
+<div class="row">
+  <div class="col-12 col-lg-2 col-md-3">
+    <div class="sticky-filter">
+
+      <div class="form-floating mb-3">
+        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
+          <option selected value="relevance">Relevance</option>
+          <option value="newest">Newest</option>
+          <option value="lowtohigh">Price: Low to High</option>
+          <option value="hightolow">Price: High to Low</option>
+        </select>
+        <label for="floatingSelect">Sort By</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
+          <option selected>All</option>
+          <option>Brown</option>
+          <option>Black</option>
+          <option>White</option>
+        </select>
+        <label for="floatingSelect">God</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
+          <option selected>50</option>
+          <option>100</option>
+          <option>1000</option>
+          <option>2000</option>
+        </select>
+        <label for="floatingSelect">Min Price</label>
+      </div>
+
+
+      <div class="form-floating mb-3">
+        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
+          <option selected>5000</option>
+          <option>4000</option>
+          <option>2000</option>
+          <option>1000</option>
+        </select>
+        <label for="floatingSelect">Max Price</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
+          <option selected>All</option>
+          <option>Brown</option>
+          <option>Black</option>
+          <option>White</option>
+        </select>
+        <label for="floatingSelect">Frame Colour</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
+          <option selected>All</option>
+          <option>Brown</option>
+          <option>Black</option>
+          <option>White</option>
+        </select>
+        <label for="floatingSelect">Frame Width</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
+          <option selected>All</option>
+          <option>Brown</option>
+          <option>Black</option>
+          <option>White</option>
+        </select>
+        <label for="floatingSelect">Frame Size</label>
+      </div>
+
+      <div class="mb-3 d-flex justify-content-end">
+        <button class="btn btn-outline-secondary btn-sm me-1">
+            <small>Reset</small>
+        </button>
+        <button class="btn btn-outline-primary btn-sm">
+          <small>Apply</small>
+      </button>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-12 col-lg-10 col-md-9">
+    <app-product-cards [lg_columns]=4 [md_columns]=6></app-product-cards>
+  </div>
+</div>

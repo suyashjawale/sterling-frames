@@ -1,4 +1,5 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
@@ -7,64 +8,61 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 })
 
 export class NavbarComponent {
-    options: Set<string> = new Set(['sanfransico', 'japan', 'yokohama 1', 'yokohama', 'czech', 'czech repulic']);
-    filteredOptions: Set<string> = new Set();
+    options: Array<string> = ['sanfransico', 'japan', 'yokohama 1', 'yokohama', 'czech', 'czech repulic'];
+
+    filteredOptions: Array<string> = [];
     searchText: string = "";
-    loggedIn: boolean = false;
     selectedIndex = -1;
     touchStartX: number = -1;
     touchEndX: number = -1;
+    loggedIn: boolean = false;
     optionIndices: Map<string, number> = new Map();
 
-    closeOffcanvas:any;
+    closeOffcanvas: any;
 
-    constructor(private elementRef: ElementRef) {}
+    constructor(private elementRef: ElementRef, private router: Router) { }
 
-    ngOnInit(){
+
+    ngOnInit() {
         this.closeOffcanvas = this.elementRef.nativeElement.querySelector('#closeOffcanvas');
     }
-    
+
     filterOptions(): void {
         const lowerCaseSearchText = this.searchText.toLowerCase();
-
+        this.selectedIndex = -1;
         if (lowerCaseSearchText) {
-            this.filteredOptions = new Set(
-                [...this.options].filter(option =>
-                    option.toLowerCase().includes(lowerCaseSearchText)
-                )
-            );
+            this.filteredOptions = this.options.filter(option => option.toLowerCase().includes(lowerCaseSearchText));
         } else {
-            this.filteredOptions.clear();
+            this.filteredOptions = [];
+        }
+    }
+
+    search() {
+        if (this.searchText.trim() !== "") {
+            this.filteredOptions = [];
+            this.router.navigate(['/search'], { queryParams: { q: this.searchText } });
+            this.selectedIndex = -1;
         }
     }
 
     onKeyDown(event: KeyboardEvent) {
-        if (this.filteredOptions.size === 0) {
-            return;
+        if (event.key === 'Enter') {
+            this.search();
         }
 
-        let newIndex = this.selectedIndex;
-
-        if (event.key === 'ArrowUp' && newIndex > 0) {
-            newIndex--;
-        } else if (event.key === 'ArrowDown' && newIndex < this.filteredOptions.size - 1) {
-            newIndex++;
-        } else if (event.key === 'Enter' && newIndex !== -1) {
-            this.selectOption(newIndex);
-            return;
-        }
-
-        if (newIndex !== this.selectedIndex) {
-            this.selectedIndex = newIndex;
+        if (event.key === 'ArrowUp' && this.filteredOptions.length > 1) {
+            this.selectedIndex--;
+            this.searchText = this.filteredOptions[this.selectedIndex];
+        } else if (event.key === 'ArrowDown' && this.selectedIndex < this.filteredOptions.length - 1) {
+            this.selectedIndex++;
+            this.searchText = this.filteredOptions[this.selectedIndex];
         }
     }
 
 
     selectOption(ind: number): void {
-        const option = [...this.filteredOptions][ind];
-        this.searchText = option;
-        this.filteredOptions.clear();
-        // this.selectedIndex = -1;
+        this.searchText = this.filteredOptions[ind];
+        this.search();
     }
 
     @HostListener('touchstart', ['$event'])
