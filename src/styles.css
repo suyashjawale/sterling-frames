@@ -130,18 +130,6 @@ body {
     top: 6rem;
 }
 
-.gradient-overlay{
-    /* background: -moz-linear-gradient(0deg, rgba(64,10,111,1) 0%, rgba(89,59,116,0) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(64,10,111,1) 0%, rgba(89,59,116,0) 100%); */
-    background: linear-gradient(0deg, rgb(255, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
 .category-img{
-    width: 4rem;
-}
-
-.img-bg{
-    
-    filter: blur(20px);
-  -webkit-filter: blur(20px);
+    width: 4.1rem;
 }
