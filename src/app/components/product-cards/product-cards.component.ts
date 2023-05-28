@@ -9,7 +9,4 @@ export class ProductCardsComponent {
   counter(i: number) {
     return new Array(i);
   }
-
-  @Input() lg_columns : number = 4;
-  @Input() md_columns : number = 4;
 }
