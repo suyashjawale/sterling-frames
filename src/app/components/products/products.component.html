@@ -1,90 +1,181 @@
 <div class="row">
-  <div class="col-12 col-lg-2 col-md-3">
-    <div class="sticky-filter">
+	<div class="col-12 col-lg-2 col-md-3">
+		<div class="sticky-filter">
 
-      <div class="form-floating mb-3">
-        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
-          <option selected value="relevance">Relevance</option>
-          <option value="newest">Newest</option>
-          <option value="lowtohigh">Price: Low to High</option>
-          <option value="hightolow">Price: High to Low</option>
-        </select>
-        <label for="floatingSelect">Sort By</label>
-      </div>
+			<div class="form-floating mb-3">
+				<select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
+					<option selected value="relevance">Relevance</option>
+					<option value="newest">Newest</option>
+					<option value="lowtohigh">Price: Low to High</option>
+					<option value="hightolow">Price: High to Low</option>
+				</select>
+				<label for="floatingSelect">Sort By</label>
+			</div>
 
-      <div class="form-floating mb-3">
-        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
-          <option selected>All</option>
-          <option>Brown</option>
-          <option>Black</option>
-          <option>White</option>
-        </select>
-        <label for="floatingSelect">God</label>
-      </div>
+			<div class="mb-1"><small class="text-muted">Price Range</small></div>
+			<div class="mb-3 d-flex justify-content-end">
+				<select class="form-select form-select-sm shadow-none" aria-label=".form-select-sm example">
+					<option selected>Min</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+				<div class="mx-2 align-self-center">To</div>
+				<select class="form-select form-select-sm shadow-none" aria-label=".form-select-sm example">
+					<option selected>Max</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
 
-      <div class="form-floating mb-3">
-        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
-          <option selected>50</option>
-          <option>100</option>
-          <option>1000</option>
-          <option>2000</option>
-        </select>
-        <label for="floatingSelect">Min Price</label>
-      </div>
+			<div><small class="text-muted mb-1">Frame Colour</small></div>
+			<!-- <input class="form-control form-control-sm my-1 shadow-none mb-2" type="text" placeholder="Search Color" aria-label="example"> -->
+			<div class="row mb-3">
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>Golden</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>Black</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>White</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>Brown</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>Pink</small>
+						</label>
+					</div>
+				</div>
+			</div>
 
+			<div><small class="text-muted mb-1">Frame Border Size</small></div>
+			<!-- <input class="form-control form-control-sm my-1 shadow-none mb-2" type="text" placeholder="Search Color" aria-label="example"> -->
+			<div class="row mb-3">
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>0.5 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>1 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>1.5 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>1.75 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>2 Inch</small>
+						</label>
+					</div>
+				</div>
+			</div>
 
-      <div class="form-floating mb-3">
-        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
-          <option selected>5000</option>
-          <option>4000</option>
-          <option>2000</option>
-          <option>1000</option>
-        </select>
-        <label for="floatingSelect">Max Price</label>
-      </div>
+			<div><small class="text-muted mb-1">Frame Size (Width x Height)</small></div>
+			<!-- <input class="form-control form-control-sm my-1 shadow-none mb-2" type="text" placeholder="Search Color" aria-label="example"> -->
+			<div class="row mb-3">
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>12 x 18</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>6 x 18</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>22 x 18</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>20 x 18</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>12 x 20</small>
+						</label>
+					</div>
+				</div>
+			</div>
 
-      <div class="form-floating mb-3">
-        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
-          <option selected>All</option>
-          <option>Brown</option>
-          <option>Black</option>
-          <option>White</option>
-        </select>
-        <label for="floatingSelect">Frame Colour</label>
-      </div>
+			<div class="mb-3 d-flex justify-content-end">
+				<button class="btn btn-outline-secondary btn-sm me-1">
+					<small>Reset</small>
+				</button>
+				<button class="btn btn-outline-primary btn-sm">
+					<small>Apply</small>
+				</button>
+			</div>
 
-      <div class="form-floating mb-3">
-        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
-          <option selected>All</option>
-          <option>Brown</option>
-          <option>Black</option>
-          <option>White</option>
-        </select>
-        <label for="floatingSelect">Frame Width</label>
-      </div>
-
-      <div class="form-floating mb-3">
-        <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
-          <option selected>All</option>
-          <option>Brown</option>
-          <option>Black</option>
-          <option>White</option>
-        </select>
-        <label for="floatingSelect">Frame Size</label>
-      </div>
-
-      <div class="mb-3 d-flex justify-content-end">
-        <button class="btn btn-outline-secondary btn-sm me-1">
-            <small>Reset</small>
-        </button>
-        <button class="btn btn-outline-primary btn-sm">
-          <small>Apply</small>
-      </button>
-      </div>
-
-    </div>
-  </div>
-  <div class="col-12 col-lg-10 col-md-9">
-    <app-product-cards [lg_columns]=4 [md_columns]=6></app-product-cards>
-  </div>
+		</div>
+	</div>
+	<div class="col-12 col-lg-10 col-md-9">
+		<app-product-cards [lg_columns]=4 [md_columns]=6></app-product-cards>
+	</div>
 </div>
