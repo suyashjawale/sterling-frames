@@ -145,3 +145,24 @@ body {
 .category-img{
     width: 4.1rem;
 }
+
+/* ________________________________ */
+
+.offcanvas-body {
+    scrollbar-width: thin;
+    scrollbar-color: #929292 #ececec;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.offcanvas-body::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: #ececec;
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #b1b1b1;
+}
