@@ -1,4 +1,203 @@
-<div class="mb-3">Showing results for <span class="font-600">{{productName}}</span></div>
 <!-- <app-products></app-products> -->
+
+<div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-transparent border btn-sm rounded-2 me-2 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+        <code>
+            <svg width="1.25rem" height="1.25rem" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17 10H19C21 10 22 9 22 7V5C22 3 21 2 19 2H17C15 2 14 3 14 5V7C14 9 15 10 17 10Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17 22H19C21 22 22 21 22 19V17C22 15 21 14 19 14H17C15 14 14 15 14 17V19C14 21 15 22 17 22Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M5 22H7C9 22 10 21 10 19V17C10 15 9 14 7 14H5C3 14 2 15 2 17V19C2 21 3 22 5 22Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </code>
+        <span class="align-bottom">Specific</span>
+    </button>
+    <button class="btn btn-transparent border btn-sm rounded-2 me-2 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+        <code>
+            <svg width="1.3rem" height="1.3rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19 4V10M19 10C17.8954 10 17 10.8954 17 12C17 13.1046 17.8954 14 19 14M19 10C20.1046 10 21 10.8954 21 12C21 13.1046 20.1046 14 19 14M19 14V20M12 4V16M12 16C10.8954 16 10 16.8954 10 18C10 19.1046 10.8954 20 12 20C13.1046 20 14 19.1046 14 18C14 16.8954 13.1046 16 12 16ZM5 8V20M5 8C6.10457 8 7 7.10457 7 6C7 4.89543 6.10457 4 5 4C3.89543 4 3 4.89543 3 6C3 7.10457 3.89543 8 5 8Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+        </code>
+        <span class="align-bottom">Filters</span>
+    </button>
+    <select class="form-select form-select-sm sort-menu-width shadow-none" aria-label=".form-select-sm example">
+        <option selected>Relevance</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+      </select>
+</div>
+
+<div class="mb-3">Showing results for <span class="font-600">{{productName}}</span></div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+
+        <div class="offcanvas-header">
+            <button type="button" class="btn btn-transparent px-0">
+                <span class="font-600">Filters</span>
+            </button>
+            <button type="button" class="btn btn-transparent px-0 border-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close">
+                <span class="font-600">Close</span>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+
+
+			<div class="mb-1"><small class="text-muted">Price Range</small></div>
+			<div class="mb-3 d-flex justify-content-end">
+				<select class="form-select form-select-sm shadow-none" aria-label=".form-select-sm example">
+					<option selected>Min</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+				<div class="mx-2 align-self-center">To</div>
+				<select class="form-select form-select-sm shadow-none" aria-label=".form-select-sm example">
+					<option selected>Max</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+
+			<div><small class="text-muted mb-1">Frame Colour</small></div>
+			<!-- <input class="form-control form-control-sm my-1 shadow-none mb-2" type="text" placeholder="Search Color" aria-label="example"> -->
+			<div class="row mb-3">
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>Golden</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>Black</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>White</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>Brown</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>Pink</small>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div><small class="text-muted mb-1">Frame Border Size</small></div>
+			<!-- <input class="form-control form-control-sm my-1 shadow-none mb-2" type="text" placeholder="Search Color" aria-label="example"> -->
+			<div class="row mb-3">
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>0.5 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>1 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>1.5 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>1.75 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>2 Inch</small>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div><small class="text-muted mb-1">Frame Size (Length x Breadth)</small></div>
+			<!-- <input class="form-control form-control-sm my-1 shadow-none mb-2" type="text" placeholder="Search Color" aria-label="example"> -->
+			<div class="row mb-3">
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>12 x 18 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>6 x 18 Inch</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>22 x 18</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>20 x 18</small>
+						</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-check">
+						<input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							<small>12 x 20</small>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="my-3 d-flex justify-content-end">
+				<button class="btn btn-sm btn-outline-secondary me-2" data-bs-dismiss="offcanvas" aria-label="Close">
+					<small>Reset</small>
+				</button>
+				<button class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+					<small>Apply</small>
+				</button>
+			</div>
+
+        </div>
+    
+</div>
 
 <app-product-cards></app-product-cards>

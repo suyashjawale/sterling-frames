@@ -46,6 +46,10 @@ body {
     .scrollable-div::-webkit-scrollbar {
         display: none;
     }
+
+    .sort-menu-width{
+        width: 40% !important;
+    }
 }
 
 @media only screen and (min-width: 576px) {
@@ -59,6 +63,10 @@ body {
 
     .nav-content-margin {
         margin-top: 8rem !important;
+    }
+
+    .sort-menu-width{
+        width: 30% !important;
     }
 }
 
@@ -83,6 +91,10 @@ body {
 
     .lg-invisible {
         display: none !important;
+    }
+
+    .sort-menu-width{
+        width: 14% !important;
     }
 }
 
